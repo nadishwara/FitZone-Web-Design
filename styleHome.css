@@ -1,0 +1,222 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    font-family: Arial, sans-serif;
+    color: #FFFCFC;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes fadeInZoom {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%) scale(0.8); /* Start slightly smaller */
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(-50%) scale(1); /* Return to normal size */
+    }
+}
+
+.image-section img {
+    width: 30%;
+    max-width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0; /* Initially hidden */
+    animation: fadeInZoom 1.5s ease-out forwards; /* Apply animation */
+}
+
+
+@keyframes slideToCenter {
+    from {
+        transform: translateX(-100vw); /* Start far left */
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0); /* Stop at its defined position */
+        opacity: 1;
+    }
+}
+
+.welcome {
+    position: absolute;
+    margin-top: -180px;
+    margin-left: 150px; /* Stopping position */
+    font-size: 140px;
+    background: linear-gradient(to bottom, #FFFCFC, #999797);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: slideToCenter 1.5s ease-out forwards;
+}
+
+@keyframes slideToCenterRight {
+    from {
+        transform: translateX(100vw); /* Start from the right */
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0); /* Stop at its defined position */
+        opacity: 1;
+    }
+}
+
+.fitzone {
+    position: absolute;
+    margin-top: 550px;
+    margin-left: 1030px; /* Stopping position */
+    font-size: 140px;
+    background: linear-gradient(to bottom, #FFFCFC, #000000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;   
+    animation: slideToCenterRight 1.5s ease-out forwards;
+}
+
+@keyframes popUp {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.1); /* Slightly enlarge for a pop effect */
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1); /* Back to normal size */
+        opacity: 1;
+    }
+}
+
+.content {
+    margin-top: 10px; /* Adjust this for your desired spacing */
+    margin-left: 250px;
+    font-size: 18px;
+    animation: popUp 1s ease-out forwards; /* Animation duration */
+}
+
+.text-section1 {
+    position: absolute;
+    z-index: 2;
+    text-align: left;
+    max-width: 600px;
+    left: 10%;
+}
+
+.text-section h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    line-height: 1;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Mobile Devices */
+@media screen and (max-width: 768px) {
+    .welcome {
+        font-size: 80px;
+        margin-top: -120px;
+        margin-left: 20px;
+    }
+    
+    .fitzone {
+        font-size: 80px;
+        margin-top: 400px;
+        margin-left: 20px;
+    }
+    
+    .image-section img {
+        width: 60%;
+    }
+    
+    .content {
+        margin-left: 20px;
+        font-size: 16px;
+    }
+    
+    .text-section1 {
+        left: 5%;
+        width: 90%; /* Allow text to fill the screen */
+    }
+    
+    .text-section h1 {
+        font-size: 2.5rem; /* Adjust heading size */
+    }
+}
+
+/* Extra Small Devices (Phones in Portrait Mode) */
+@media screen and (max-width: 480px) {
+    .welcome {
+        font-size: 60px;
+        margin-top: -100px;
+    }
+    
+    .fitzone {
+        font-size: 60px;
+        margin-top: 350px;
+    }
+    
+    .image-section img {
+        width: 80%; /* Larger image for small devices */
+    }
+    
+    .content {
+        font-size: 14px;
+        margin-left: 10px;
+    }
+    
+    .text-section1 {
+        left: 0;
+        width: 100%;
+    }
+    
+    .text-section h1 {
+        font-size: 2rem; /* Adjust heading size further */
+    }
+    
+}
+
+@keyframes popIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.btnJoin button {
+    margin-top: 55px;
+    margin-left: 155px;
+    background-color: #FFFFFF; /* White background */
+    color: #000000; /* Black text */
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 24px;
+    border: 2px solid #000000;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    outline: none;
+    animation: popIn 0.6s ease-out forwards; /* Apply animation */
+}
+
+/* Hover Effect */
+.btnJoin button:hover {
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+
