@@ -61,7 +61,7 @@
     left: 0;
     width: 0;
     height: 2px;
-    background-color: #ff6b6b; /* Coral accent color */
+    background-color: #007bff; /* Coral accent color */
     transition: width 0.3s ease;
 }
 
@@ -70,7 +70,7 @@
 }
 
 .navbar-collapse a:hover {
-    color: #ff6b6b;
+    color: #007bff;
 }
 
 /* Mobile Responsiveness */
@@ -104,3 +104,268 @@
         cursor: pointer;
     }
 }
+
+
+/* ===== Membership Section ===== */
+.membership-section {
+    position: absolute;
+    margin-top: 900px;
+    max-width: 1200px;
+    margin-top: 80px auto 0;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+  }
+
+  .section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-header h2 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  color: #222;
+  margin-bottom: 0.8rem;
+  line-height: 1.3;
+}
+
+.section-header .tagline {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: #555;
+  font-weight: 500;
+}
+
+/* ===== Plans Container ===== */
+.plans-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+  justify-items: center;
+}
+
+/* ===== Plan Box Styles ===== */
+.plan-box {
+  width: 100%;
+  max-width: 350px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  overflow: hidden;
+  margin-left: 50%;
+}
+
+.plan-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12);
+}
+
+.plan-box h3 {
+  font-size: 1.7rem;
+  color: #222;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.plan-features {
+  margin: 1.8rem 0;
+}
+
+.plan-features p {
+  margin: 1rem 0;
+  font-size: 1rem;
+  color: #444;
+  padding-left: 1.8rem;
+  position: relative;
+  line-height: 1.5;
+}
+
+.plan-features p::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #4CAF50;
+  font-weight: bold;
+}
+
+.plan-features p:not([class*="available"])::before {
+  content: "✗";
+  color: #f44336;
+}
+
+/* ===== Plan Specific Styles ===== */
+.plan-box.basic {
+  border-top: 4px solid #4CAF50;
+}
+
+.plan-box.premium {
+  border-top: 4px solid #2196F3;
+}
+
+.plan-box.vip {
+  border-top: 4px solid #FF5722;
+}
+
+/* .popular-tag {
+  position: absolute;
+  top: 0.8rem;
+  right: -2.2rem;
+  background: #2196F3;
+  color: white;
+  padding: 0.3rem 2.2rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transform: rotate(45deg);
+  transform-origin: center;
+} */
+
+/* ===== Button Styles ===== */
+.plan-btn {
+  width: 100%;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.plan-box.basic .plan-btn {
+  background: #4CAF50;
+  color: white;
+}
+
+.plan-box.premium .plan-btn {
+  background: #2196F3;
+  color: white;
+}
+
+.plan-box.vip .plan-btn {
+  background: #FF5722;
+  color: white;
+}
+
+.plan-btn:hover {
+  filter: brightness(1.1);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== Training Section - Left Aligned ===== */
+.training-section {
+    position: relative;
+    margin-left: 750px;
+    margin-right: 250px;
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 2.5rem;
+    text-align: left; /* Changed from center to left */
+    margin-top: 2rem;
+    margin-right: auto; /* Pushes to left side */
+    width: 100%; /* Full width or set max-width if needed */
+  }
+  
+  .training-section h2 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    color: #222;
+    margin-bottom: 1.2rem;
+    font-weight: 700;
+    text-align: center; /* Ensure heading is left-aligned */
+  }
+  
+  .training-box {
+    text-align: right; /* Left-align all content */
+  }
+  
+  .training-box p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    text-align: left; /* Explicit left alignment */
+  }
+  
+  /* If you want the training section to be narrower and left-aligned */
+  .training-section.narrow-left {
+    max-width: 600px; /* Adjust as needed */
+    margin-left: 0; /* Stick to left edge */
+    margin-right: auto; /* Let right side be automatic */
+  }
+  
+  /* For a two-column layout with plans on right */
+  .alternative-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: start;
+  }
+  
+  /* Responsive adjustment */
+  @media (max-width: 768px) {
+    .training-section {
+      text-align: left;
+      padding: 1.5rem;
+    }
+    
+    .alternative-layout {
+      grid-template-columns: 1fr;
+    }
+  }
+
+.cta-btn {
+  background: #333;
+  color: white;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+
+.cta-btn:hover {
+  background: #444;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+  .membership-section {
+    margin-top: 60px;
+    padding: 1.5rem 1rem;
+  }
+  
+  .plans-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .plan-box {
+    max-width: 100%;
+    padding: 1.5rem;
+  }
+  
+  .training-section {
+    padding: 9.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .plan-features p {
+    padding-left: 1.5rem;
+  }
+  
+  .cta-btn {
+    width: 100%;
+  }
+}
+
+
