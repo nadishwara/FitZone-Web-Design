@@ -17,11 +17,11 @@
             
             <!-- navigation link -->
              <div class="navbar-collapse" id="navbarNav">
-                <a href="home.html">Home</a>
-                <a href="blogs.html">Blogs</a>
-                <a href="about.html">About us</a>
-                <a href="contact.html">Contact us</a> 
-                <a href="login.html">Login</a>
+                <a href="home.html">HOME</a>
+                <a href="blogs.html">BLOGS</a>
+                <a href="membership.html">Membership Plans</a>
+                <a href="#footer" id="contactButton" class="contact-button">CONTACT US</a> 
+                <a href="login.html">LOGIN</a>
              </div>
          </nav>
 
@@ -92,7 +92,7 @@
 
                 <div class="membership-section">
                     <div class="section-header">
-                        <h2>Membership Plans</h2>
+                        <h2 style="color: #ffffff;">Membership Plans</h2>
                         <p class="tagline">Fitzone Our membership Plans available now!</p>
                     </div>
                     
@@ -184,5 +184,236 @@
                     <button class="btn-more">See More >></button>
                 </div>
             </div>
+
+
+
+
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>FitZone Footer</title>
+                <style>
+                    /* ===== FOOTER STYLES ===== */
+                    .footer {
+                        margin-top: 5800px;
+                        background-color: white;
+                        padding: 60px 5% 30px;
+                        color: #333;
+                        font-family: 'Segoe UI', Arial, sans-serif;
+                        box-shadow: 0 -5px 20px rgba(0,0,0,0.05);
+                    }
+                    
+                    .footer-container {
+                        max-width: 2000px;
+                        margin: 0 auto;
+                        display: grid;
+                        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                        gap: 40px;
+                    }
+                    
+                    .footer-logo {
+                        font-size: 2rem;
+                        font-weight: 700;
+                        color: #2d3436;
+                        margin-bottom: 20px;
+                    }
+                    
+                    .footer-about p {
+                        line-height: 1.6;
+                        margin-bottom: 20px;
+                        color: #555;
+                    }
+                    
+                    .footer-heading {
+                        font-size: 1.3rem;
+                        font-weight: 600;
+                        margin-bottom: 20px;
+                        color: #2d3436;
+                    }
+                    
+                    .footer-links {
+                        list-style: none;
+                    }
+                    
+                    .footer-links li {
+                        margin-bottom: 12px;
+                    }
+                    
+                    .footer-links a {
+                        color: #555;
+                        text-decoration: none;
+                        transition: color 0.3s;
+                    }
+                    
+                    .footer-links a:hover {
+                        color: #007bff;
+                    }
+                    
+                    .opening-hours p {
+                        margin-bottom: 10px;
+                        color: #555;
+                    }
+                    
+                    .opening-hours strong {
+                        color: #2d3436;
+                    }
+                    
+                    .newsletter p {
+                        color: #555;
+                        margin-bottom: 20px;
+                        line-height: 1.6;
+                    }
+                    
+                    .newsletter-form {
+                        display: flex;
+                        gap: 10px;
+                    }
+                    
+                    .newsletter-input {
+                        flex: 1;
+                        padding: 12px 15px;
+                        border: 1px solid #ddd;
+                        border-radius: 5px;
+                        font-size: 1rem;
+                    }
+                    
+                    .newsletter-button {
+                        background-color: #007bff;
+                        color: white;
+                        border: none;
+                        padding: 0 20px;
+                        border-radius: 5px;
+                        cursor: pointer;
+                        transition: background 0.3s;
+                    }
+                    
+                    .newsletter-button:hover {
+                        background-color: #0056b3;
+                    }
+                    
+                    .social-links {
+                        display: flex;
+                        gap: 15px;
+                        margin-top: 30px;
+                    }
+                    
+                    .social-icon {
+                        width: 40px;
+                        height: 40px;
+                        background-color: #f5f5f5;
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        transition: background 0.3s;
+                    }
+                    
+                    .social-icon:hover {
+                        background-color: #007bff;
+                        color: white;
+                    }
+                    
+                    .footer-bottom {
+                        text-align: center;
+                        margin-top: 50px;
+                        padding-top: 20px;
+                        border-top: 1px solid #eee;
+                        color: #777;
+                        font-size: 0.9rem;
+                    }
+                    
+                    @media (max-width: 768px) {
+                        .footer-container {
+                            grid-template-columns: 1fr;
+                            gap: 30px;
+                        }
+                        
+                        .newsletter-form {
+                            flex-direction: column;
+                        }
+                    }
+                </style>
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+            </head>
+            <body>
+                <!-- Your page content goes here -->
+                
+                <!-- Footer Section -->
+                <footer class="footer">
+                    <div class="footer-container">
+                        <!-- About Section -->
+                        <div class="footer-about">
+                            <div class="footer-logo">FitZone</div>
+                            <p>Fitness is health and lifestyle company that provides fitness training service evidenced by physical health and mental health.</p>
+                            <div class="social-links">
+                                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                        
+                        <!-- Quick Links -->
+                        <div class="footer-links">
+                            <h3 class="footer-heading">Quick Links</h3>
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Classes</a></li>
+                                <li><a href="#">Membership</a></li>
+                                <li><a href="#">Community</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Opening Hours -->
+                        <div class="opening-hours">
+                            <h3 class="footer-heading">Open Time</h3>
+                            <p><strong>Monday - Friday:</strong><br>6 a.m to 10 p.m</p>
+                            <p><strong>Weekend and Public Holidays:</strong><br>6 a.m to 10 p.m</p>
+                        </div>
+                        
+                        <!-- Newsletter -->
+                        <div class="newsletter">
+                            <h3 class="footer-heading">Newsletter</h3>
+                            <p>Be the first to know about our latest promotions and special offers. Do not miss. Join our community of FitZone fitness enthusiasts!</p>
+                            <form class="newsletter-form">
+                                <input type="email" placeholder="Your Email" class="newsletter-input" required>
+                                <button type="submit" class="newsletter-button"><i class="fas fa-paper-plane"></i></button>
+                            </form>
+
+                            <footer id="footer">
+                                <div class="footer-content">
+                                </div>
+                                </footer>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-bottom">
+                        <p>&copy; 2025 FitZone. All Rights Reserved.</p>
+                    </div>
+                </footer>
+
+                <script>
+                    document.getElementById("contactButton").addEventListener("click", function(event) {
+                        event.preventDefault(); // Prevent default jump behavior
+                
+                        let footer = document.getElementById("footer"); // Get footer element
+                        let footerPosition = footer.offsetTop; // Get footer's position
+                
+                        // Animate scrolling to footer
+                        window.scrollTo({
+                            top: footerPosition, 
+                            behavior: "smooth" // Smooth scrolling effect
+                        });
+                    });
+                </script>
+
+                                     
+            </body>
+            </html>
+
+               
+            
 </body>
 </html>

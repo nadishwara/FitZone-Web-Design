@@ -7,20 +7,45 @@
     <link rel="stylesheet" href="loginStyle.css">
 </head>
 <body>
+    <!-- navigation bar  -->
+    <link rel="stylesheet" href="navBarStyle.css">
+    <!-- Navigation Bar -->
+     <nav class="navbar">
+        <div class="container-fluid">
+            <!-- Logo -->
+             <a class="navbar-brand" href="home.html">FitZone</a>
+        </div>
+        
+        <!-- navigation link -->
+         <div class="navbar-collapse" id="navbarNav">
+            <a href="home.html">HOME</a>
+            <a href="blogs.html">BLOGS</a>
+            <a href="about.html">ABOUT US</a>
+            <a href="#footer" id="contactButton" class="contact-button">CONTACT US</a> 
+            <a href="login.html">LOGIN</a>
+         </div>
+     </nav>
+
+
     <div class="login-container">
+        <!-- Image Section -->
+        <div class="login-image">
+            <img src="assest/image.jpg" alt="Login Image">
+        </div>
+
         <!-- Form Section -->
         <div class="login-form">
             <h1>Login to Your Account</h1>
             
-            <form>
+            <form method="POST" action="login.php">
                 <div class="form-group">
                     <label for="email">Email Address</label>
-                    <input type="email" id="email" placeholder="Enter your email" required>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
                 </div>
                 
                 <div class="form-group">
                     <label for="password">Password</label>
-                    <input type="password" id="password" placeholder="Enter your password" required>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
                 </div>
                 
                 <div class="login-options">
@@ -47,25 +72,16 @@
                     </div>
                 </div>
                 
-                <!-- Enhanced Registration Section -->
+                <!-- Registration Section -->
                 <div class="registration-promo">
                     <div class="registration-header">
                         <h3>Not registered yet?</h3>
                         <p>Join our fitness community today and get your first week free!</p>
                     </div>
-
-                    <a href="RegistrationF.html" >
-                        <button type="button" class="registration-btn">
-                            Registration now!
-                        </button>
-                    </a>
+                    
+                    <a href="RegistrationF.html" class="registration-btn">Register now!</a>
                 </div>
             </form>
-        </div>
-        
-        <!-- Image Section -->
-        <div class="login-image">
-            <img src="assest/image.jpg" alt="Login Image">
         </div>
     </div>
 </body>
