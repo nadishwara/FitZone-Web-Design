@@ -350,7 +350,7 @@ div.scroll-container {
 .yoga-header {
   font-size: 24px;
   margin-bottom: 15px;
-  color: #ffcc00; /* Highlight color */
+  color: #ff6b6b; /* Highlight color */
 }
 
 @media (max-width: 768px) {
@@ -365,4 +365,367 @@ div.scroll-container {
   }
 }
 
+/* Stranth training style */
+/* Main Container Styles */
+.scroll-container {
+  background-color: #1a1a1a; /* Darker background for better contrast */
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 20px 0; /* More vertical padding */
+  margin: 30px auto;
+  max-width: 95%;
+  position: relative;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
 
+/* Scroll Content Styles */
+.scroll-content {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll 40s linear infinite; /* Slower animation */
+  padding: 0 20px; /* Add horizontal padding */
+}
+
+/* Image Styles - Larger Size */
+.scroll-content img {
+  padding: 0 15px; /* More space between images */
+  height: 450px; /* Increased height */
+  width: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  border: 3px solid #333; /* Subtle border */
+}
+
+/* Hover Effects */
+.scroll-content img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+  border-color: #ff6b6b; /* Highlight border on hover */
+  z-index: 10; /* Bring hovered image forward */
+  position: relative;
+}
+
+/* Animation Keyframes */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Pause State */
+.scroll-content.paused {
+  animation-play-state: paused;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .scroll-content img {
+    height: 400px;
+  }
+}
+
+@media (max-width: 992px) {
+  .scroll-content img {
+    height: 350px;
+    padding: 0 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .scroll-content img {
+    height: 300px;
+    padding: 0 10px;
+  }
+  .scroll-container {
+    max-width: 100%;
+    border-radius: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .scroll-content img {
+    height: 250px;
+  }
+}
+
+/* Gradient Overlays for Better Visibility */
+.scroll-container::before,
+.scroll-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.scroll-container::before {
+  left: 0;
+  background: linear-gradient(to right, #1a1a1a 0%, transparent 100%);
+}
+
+.scroll-container::after {
+  right: 0;
+  background: linear-gradient(to left, #1a1a1a 0%, transparent 100%);
+}
+
+/* stragth taining title */
+.strength-header {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #f1f1f1;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.strength-header::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #ff6b6b;
+  margin: 15px auto 0;
+}
+
+/* description stranth training */
+.description {
+  background: 
+    linear-gradient(135deg, rgba(0, 0, 0, 0.745) 0%, rgba(0, 0, 0, 0.417) 70%),
+    url('assest/weight-loss.jpg') center/cover no-repeat;
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  margin: 2rem auto;
+  max-width: 900px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  position: relative;
+  overflow: hidden;
+  color: #ffffff;
+  /* Add these new properties */
+  background-blend-mode: overlay; /* Blends gradient with image */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+}
+
+.description-header {
+  color: #ffffff !important;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.description p {
+  color: #ffffff !important;
+  font-size: 1.1rem;
+  text-align: justify;
+  text-justify: inter-word;
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 0 1rem;
+  font-weight: 700;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .description {
+    padding: 2rem 1.5rem;
+    margin: 1.5rem;
+  }
+  
+  .description-header {
+    font-size: 1.8rem;
+  }
+  
+  .description p {
+    font-size: 1rem;
+    padding: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .description {
+    padding: 1.5rem 1rem;
+    margin: 1rem;
+    border-radius: 8px;
+  }
+  
+  .description-header {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .description p {
+    font-size: 0.95rem;
+    text-align: left; /* Better readability on small screens */
+  }
+}
+
+/* Trainers */
+/* General Styles */
+
+
+.trainers-container {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: #7f8c8d;
+  margin-bottom: 40px;
+  font-size: 1.1rem;
+}
+
+/* Trainer Cards Grid */
+.trainers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+/* Trainer Card Styles */
+.trainer-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 350px;
+}
+
+.trainer-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.trainer-image {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+}
+
+.trainer-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.trainer-card:hover .trainer-image img {
+  transform: scale(1.05);
+}
+
+.specialty-badge {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: #e74c3c;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.trainer-info {
+  padding: 25px;
+}
+
+.trainer-info h3 {
+  margin: 0 0 5px 0;
+  font-size: 1.5rem;
+  color: #2c3e50;
+}
+
+.certification {
+  color: #7f8c8d;
+  font-size: 0.9rem;
+  margin: 0 0 15px 0;
+}
+
+.rating {
+  color: #f39c12;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.rating span {
+  color: #7f8c8d;
+  font-size: 0.9rem;
+  margin-left: 10px;
+}
+
+.bio {
+  color: #34495e;
+  margin: 15px 0 20px 0;
+  font-size: 0.95rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.social-links a {
+  color: #7f8c8d;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #3498db;
+}
+
+.contact-btn {
+  width: 100%;
+  padding: 12px;
+  background: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-btn:hover {
+  background: #2980b9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .trainers-grid {
+      grid-template-columns: 1fr;
+  }
+  
+  .trainer-card {
+      max-width: 100%;
+  }
+  
+  .section-title {
+      font-size: 2rem;
+  }
+}
