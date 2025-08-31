@@ -1,3 +1,5 @@
+![Uploading FitZoneWen-Project.png…]()
+
 # FitZone Website
 
 ## 📖 Overview
@@ -73,5 +75,6 @@ website/
     📝 Blog / Content section
 
     📅 Online booking system
+
 
     💳 Payment integration
