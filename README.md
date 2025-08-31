@@ -1,4 +1,5 @@
-![Uploading FitZoneWen-Project.png…]()
+
+<img width="1747" height="836" alt="FitZoneWen-Project" src="https://github.com/user-attachments/assets/181e9e48-eb38-4861-a23d-d1796b7aacd0" />
 
 # FitZone Website
 
@@ -78,3 +79,4 @@ website/
 
 
     💳 Payment integration
+
