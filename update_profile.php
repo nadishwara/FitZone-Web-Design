@@ -61,6 +61,6 @@ $conn->close();
         <button type="submit">Update Profile</button>
     </form>
     <br>
-    <a href="profile.php">Back to Profile</a>
+    <a href="user_profile.php">Back to Profile</a>
 </body>
 </html>

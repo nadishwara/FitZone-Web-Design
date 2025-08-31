@@ -34,6 +34,6 @@ if (!isset($_SESSION['user_id'])) {
         <button type="submit">Change Password</button>
     </form>
     <br>
-    <a href="login.html">Back to Profile</a>
+    <a href="user_profile.php">Back to Profile</a>
 </body>
 </html>

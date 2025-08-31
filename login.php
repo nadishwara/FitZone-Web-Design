@@ -5,41 +5,46 @@ include("connection.php");
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $conn->real_escape_string($_POST['email']);
     $password = $_POST['password'];
+    $requested_role = $conn->real_escape_string($_POST['role']);
 
-    // Query to check user credentials
-    $sql = "SELECT id, first_name, last_name, password FROM userRegistration WHERE email = '$email'";
+    // selected needed Query from database3 
+    $sql = "SELECT id, first_name, last_name, password, role FROM userRegistration WHERE email = '$email'";
     $result = $conn->query($sql);
 
     if ($result->num_rows == 1) {
         $user = $result->fetch_assoc();
         
-        // Verify password
+        // cheacking psw
         if (password_verify($password, $user['password'])) {
-            // Login successful
+            // Verify role 
+            if ($requested_role === 'Admin' && $user['role'] !== 'admin') {
+                die("<script>alert('Admin access denied'); window.history.back();</script>");
+            }
+
+            // Set session variables
             $_SESSION['user_id'] = $user['id'];
             $_SESSION['user_name'] = $user['first_name'] . ' ' . $user['last_name'];
+            $_SESSION['user_role'] = $user['role'];
+            $_SESSION['last_login'] = time();
             
-            echo "<script>
-                    alert('Login successful! Welcome back " . addslashes($user['first_name']) . "');
-                    window.location.href = 'user_profile.php';
-                  </script>";
+            // Record admin login
+            if ($user['role'] === 'admin') {
+                $conn->query("UPDATE adminPanel SET last_login = NOW() WHERE user_id = " . $user['id']);
+            }
+
+            //  role handling
+            if ($user['role'] === 'admin') {
+                header("Location: admin/dashboard.php");
+            } else {
+                header("Location: user_profile.php");
+            }
             exit();
-        } else {
-            // Invalid password
-            echo "<script>
-                    alert('Invalid email or password');
-                    window.history.back();
-                  </script>";
+        } else { //error alert messages
+            echo "<script>alert('Invalid credentials'); window.history.back();</script>";
         }
     } else {
-        // User not found
-        echo "<script>
-                alert('Invalid email or password');
-                window.history.back();
-              </script>";
+        echo "<script>alert('Invalid credentials'); window.history.back();</script>";
     }
-
-    $conn->close();
 } else {
     header("Location: login.html");
     exit();

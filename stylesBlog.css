@@ -729,3 +729,82 @@ div.scroll-container {
       font-size: 2rem;
   }
 }
+
+
+/* fighting class */
+
+/* Container */
+.training-container {
+  max-width: 800px;
+  margin: 50px auto;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Header Section */
+.training-header {
+  background-color: #d32f2f; /* Martial arts red */
+  color: white;
+  padding: 30px;
+  text-align: center;
+}
+
+.training-header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.training-header p {
+  margin: 10px 0 0;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+/* Instructor Section */
+.instructor-section {
+  padding: 30px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+.instructor-name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+  color: #d32f2f;
+}
+
+.instructor-title {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.instructor-achievements {
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .training-container {
+      margin: 20px;
+  }
+  
+  .training-header h1 {
+      font-size: 2rem;
+  }
+}
+
+footer {
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 20px;
+}

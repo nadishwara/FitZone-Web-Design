@@ -8,6 +8,7 @@
     
 </head>
 <body>
+
         <!-- Navigation Bar -->
         <nav class="navbar">
             <div class="container-fluid">
@@ -16,9 +17,9 @@
             </div>
             <div class="navbar-collapse" id="navbarNav">
                 <a href="home.html">HOME</a></li>
-                <a href="#">PERSONAL TRAINING</a></li>
-                <a href="#">ONLINE COACHING</a></li>
-                <a href="#">OUR SERVICES</a></li>
+                <a href="#trainers-section" class="nav-link">PERSONAL TRAINING</a></li>
+                <a href="store.html">STORE</a>
+                <a href="MealPlan.html">MEAL PLAN</a></li>
                 <a href="#">CONTACT US</a></li>
         </nav>
     
@@ -127,15 +128,15 @@
 
         <div class="scroll-container">
           <div class="scroll-content">
-            <img src="strengthTraing/image1.jpg" alt="Cinque Terre" width="600" height="400">
-            <img src="strengthTraing/image2.jpg" alt="Forest" width="600" height="400">
-            <img src="strengthTraing/image3.jpg" alt="Northern Lights" width="600" height="400">
-            <img src="strengthTraing/image4.jpg" alt="Mountains" width="600" height="400">
-            <img src="strengthTraing/image5.jpg" alt="Mountains" width="600" height="400">
-            <img src="strengthTraing/image6.jpg" alt="Mountains" width="600" height="400">
-            <img src="strengthTraing/image7.jpg" alt="Mountains" width="600" height="400">
-            <img src="strengthTraing/image8.jpg" alt="Mountains" width="600" height="400">
-            <img src="strengthTraing/image9.jpg" alt="Mountains" width="600" height="400">
+            <img src="strengthTraing/image1.jpg" alt="" width="600" height="400">
+            <img src="strengthTraing/image2.jpg" alt="" width="600" height="400">
+            <img src="strengthTraing/image3.jpg" alt="" width="600" height="400">
+            <img src="strengthTraing/image4.jpg" alt="" width="600" height="400">
+            <img src="strengthTraing/image5.jpg" alt="" width="600" height="400">
+            <img src="strengthTraing/image6.jpg" alt="" width="600" height="400">
+            <img src="strengthTraing/image7.jpg" alt="" width="600" height="400">
+            <img src="strengthTraing/image8.jpg" alt="" width="600" height="400">
+            <img src="strengthTraing/image9.jpg" alt="" width="600" height="400">
             
           </div>
         </div>
@@ -152,7 +153,7 @@
         <script src="script.js" defer></script>
 
 
-        <div class="trainers-container">
+        <div class="trainers-container" id="trainers-section">
           <h1 class="section-title">Meet Our Trainers</h1>
           <p class="section-subtitle">Professional certified trainers ready to help you reach your goals</p>
           
@@ -160,11 +161,11 @@
               <!-- Trainer 1 -->
               <div class="trainer-card">
                   <div class="trainer-image">
-                      <img src="https://images.unsplash.com/photo-1550345332-09e3ac987658" alt="Trainer John">
+                      <img src="Trainers/Lee.png" alt="Trainer John">
                       <div class="specialty-badge">Bodybuilding</div>
                   </div>
                   <div class="trainer-info">
-                      <h3>John Smith</h3>
+                      <h3>Lalitha Epaarachchi</h3>
                       <p class="certification">NASM Certified Personal Trainer</p>
                       <div class="rating">
                           <i class="fas fa-star"></i>
@@ -180,18 +181,20 @@
                           <a href="#"><i class="fab fa-facebook"></i></a>
                           <a href="#"><i class="fab fa-linkedin"></i></a>
                       </div>
-                      <button class="contact-btn">Book Session</button>
+                      <a href="membershipPage.html">  
+                        <button class="contact-btn">Book Session</button>
+                      </a>
                   </div>
               </div>
   
               <!-- Trainer 2 -->
               <div class="trainer-card">
                   <div class="trainer-image">
-                      <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b" alt="Trainer Sarah">
+                      <img src="Trainers/GaiaKodithuwakku.png" alt="Trainer Sarah">
                       <div class="specialty-badge">Weight Loss</div>
                   </div>
                   <div class="trainer-info">
-                      <h3>Sarah Johnson</h3>
+                      <h3>Gaia Kodithuwakku</h3>
                       <p class="certification">ACE Certified Personal Trainer</p>
                       <div class="rating">
                           <i class="fas fa-star"></i>
@@ -207,8 +210,10 @@
                           <a href="#"><i class="fab fa-youtube"></i></a>
                           <a href="#"><i class="fab fa-tiktok"></i></a>
                       </div>
-                      <button class="contact-btn">Book Session</button>
-                  </div>
+                      <a href="membershipPage.html">
+                        <button class="contact-btn">Book Session</button>
+                      </a>
+                    </div>
               </div>
   
               <!-- Trainer 3 -->
@@ -234,11 +239,30 @@
                           <a href="#"><i class="fab fa-facebook"></i></a>
                           <a href="#"><i class="fab fa-whatsapp"></i></a>
                       </div>
-                      <button class="contact-btn">Book Session</button>
+                      <a href="membershipPage.html">  
+                        <button class="contact-btn">Book Session</button>
+                      </a>
                   </div>
               </div>
           </div>
       </div>
 
+      <div class="training-container">
+        <div class="training-header">
+            <h1>Martial Arts Training</h1>
+            <p>Program with John Gardener</p>
+        </div>
+        
+        <div class="instructor-section">
+            <div class="instructor-name">JOHN GARDENER</div>
+            <div class="instructor-title">(3rd Dan Karate) England</div>
+            <div class="instructor-achievements">
+                Team Member Kata 2013, Multiple English Champion
+            </div>
+        </div>
+    </div>
+    <footer>
+      <p>© 2024 FitZone. All rights reserved.</p>
+  </footer>
 </body>
 </html>
